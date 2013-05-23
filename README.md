@@ -52,7 +52,7 @@ Templates matching the extension `options.extension` will be compiled.
 ### Usage Examples
 
 #### Default Options
-In this example, the default options are used to compile Mustache templates. So if the `testing.mustache` file has the content `{{test}}` and the `dir/testing.mustache` file had the content `{{nested test}}`, the generated result would be `window.TEMPLATES = {"testing":"{{test}}\n","dir/testing":"{{nested test}}\n"};\n`
+In this example, the default options are used to compile Mustache templates. So if the `testing.mustache` file has the content `{{test}}` and the `dir/testing.mustache` file had the content `{{nested test}}`, the generated result would be `window.TEMPLATES = {"testing":"{{test}}\n","dir/testing":"{{nested test}}\n"};`
 
 ```js
 grunt.initConfig({
@@ -67,7 +67,7 @@ grunt.initConfig({
 ```
 
 #### Custom Options
-In this example, custom options are used to compile Handlebars templates. So if the `testing.hbs` file has the content `{{test}}` and the `dir/testing.hbs` file had the content `{{nested test}}`, the generated result in this case would be `window.HANDLEBARS = {"testing":"{{test}}\n","dir/testing":"{{nested test}}\n"};\n`
+In this example, custom options are used to compile Handlebars templates. So if the `testing.hbs` file has the content `{{test}}` and the `dir/testing.hbs` file had the content `{{nested test}}`, the generated result in this case would be `window.HANDLEBARS = {"testing":"{{test}}\n","dir/testing":"{{nested test}}\n"};`
 
 ```js
 grunt.initConfig({
