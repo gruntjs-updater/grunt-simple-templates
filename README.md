@@ -52,7 +52,7 @@ Templates matching the extension `options.extension` will be compiled.
 ### Usage Examples
 
 #### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+In this example, the default options are used to compile Mustache templates. So if the `testing.mustache` file has the content `{{test}}` and the `dir/testing.mustache` file had the content `{{nested test}}`, the generated result would be `window.TEMPLATES = {"testing":"{{test}}\n","dir/testing":"{{nested test}}\n"};\n`
 
 ```js
 grunt.initConfig({
@@ -67,7 +67,7 @@ grunt.initConfig({
 ```
 
 #### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+In this example, custom options are used to compile Handlebars templates. So if the `testing.hbs` file has the content `{{test}}` and the `dir/testing.hbs` file had the content `{{nested test}}`, the generated result in this case would be `window.HANDLEBARS = {"testing":"{{test}}\n","dir/testing":"{{nested test}}\n"};\n`
 
 ```js
 grunt.initConfig({
