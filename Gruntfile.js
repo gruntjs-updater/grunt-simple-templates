@@ -40,7 +40,8 @@ module.exports = function(grunt) {
         dest: "tmp/custom_options",
 
         options: {
-          namespace: "CUSTOM_TEMPLATES"
+          namespace: "CUSTOM_TEMPLATES",
+          extension: "hbs"
         }
       }
     },

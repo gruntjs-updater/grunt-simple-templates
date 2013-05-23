@@ -1,7 +1,7 @@
 {
   "name": "grunt-simple-templates",
   "description": "Simple compilation of JavaScript templates into objects",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/jclem/grunt-simple-templates",
   "author": {
     "name": "Jonathan Clem",

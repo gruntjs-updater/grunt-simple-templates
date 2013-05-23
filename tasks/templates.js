@@ -21,20 +21,23 @@ module.exports = function(grunt) {
     var options = this.options({
       punctuation: '.',
       separator: ', ',
-      namespace: 'TEMPLATES'
+      namespace: 'TEMPLATES',
+      extension: "mustache"
     });
 
     var templateObject = {};
 
     this.filesSrc.forEach(function(file) {
       grunt.file.recurse(file, function(absPath, rootDir, subdir, filename) {
-        var templateKey = filename.split('.')[0];
+        if (filename.split('.').pop() === options.extension) {
+          var templateKey = filename.split('.')[0];
 
-        if (subdir) {
-          templateKey = subdir + "/" + templateKey;
+          if (subdir) {
+            templateKey = subdir + "/" + templateKey;
+          }
+
+          templateObject[templateKey] = grunt.file.read(absPath);
         }
-
-        templateObject[templateKey] = grunt.file.read(absPath);
       });
     });
 
