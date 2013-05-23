@@ -37,17 +37,17 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
+#### options.namespace
 Type: `String`
-Default value: `',  '`
+Default value: `'TEMPLATES'`
 
-A string value that is used to do something with whatever.
+Your templates will be in an object called `window.#{NAMESPACE}`.
 
-#### options.punctuation
+#### options.extension
 Type: `String`
-Default value: `'.'`
+Default value: `'mustache'`
 
-A string value that is used to do something else with whatever else.
+Templates matching the extension `options.extension` will be compiled.
 
 ### Usage Examples
 
@@ -59,7 +59,8 @@ grunt.initConfig({
   templates: {
     options: {},
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+      src: 'templates/',
+      dest: 'js/templates.js'
     },
   },
 })
@@ -72,11 +73,12 @@ In this example, custom options are used to do something else with whatever else
 grunt.initConfig({
   templates: {
     options: {
-      separator: ': ',
-      punctuation: ' !!!',
+      namespace: 'HANDLEBARS',
+      extension: 'hbs'
     },
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+      src: 'templates/',
+      dest: 'js/templtes.js'
     },
   },
 })
@@ -86,4 +88,6 @@ grunt.initConfig({
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-_(Nothing yet)_
+
+`0.0.2`: Only match provided or default extension.
+`0.0.1`: Initial release.

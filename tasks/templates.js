@@ -19,8 +19,6 @@ module.exports = function(grunt) {
   grunt.registerMultiTask('templates', 'Render templates into JavaScript objects', function() {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
-      punctuation: '.',
-      separator: ', ',
       namespace: 'TEMPLATES',
       extension: "mustache"
     });
