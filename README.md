@@ -90,4 +90,5 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 
 `0.0.2`: Only match provided or default extension.
+
 `0.0.1`: Initial release.
