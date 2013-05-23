@@ -1,0 +1,1 @@
+window.CUSTOM_TEMPLATES = {"nested/template":"{{nested testing}}\n","template":"{{testing}}\n"};
