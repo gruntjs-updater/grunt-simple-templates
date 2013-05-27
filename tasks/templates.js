@@ -19,7 +19,7 @@ module.exports = function(grunt) {
   grunt.registerMultiTask('templates', 'Render templates into JavaScript objects', function() {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
-      namespace: 'TEMPLATES',
+      namespace: 'window.TEMPLATES',
       extension: "mustache"
     });
 
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
       });
     });
 
-    grunt.file.write(this.data.dest, "window." + options.namespace + " = " + JSON.stringify(templateObject) + ";\n");
+    grunt.file.write(this.data.dest, options.namespace + " = " + JSON.stringify(templateObject) + ";\n");
     grunt.log.writeln('File "' + this.data.dest + '" created.');
   });
 
